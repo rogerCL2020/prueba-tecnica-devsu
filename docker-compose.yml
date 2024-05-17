@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  ms-cliente:
+    container_name: ms-cliente
+    image: ms-cliente:latest
+    build:
+      context: ms-cliente
+      dockerfile: dockerfile
+    ports:
+      - 8081:8081
+    environment:
+      - SPRING_PROFILES_ACTIVE=demo
+      - DATABASE_URL=jdbc:postgresql://java_db:5432/demo-devsu
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    networks:
+      - backend
+    depends_on:
+      - java_db
+  ms-cuenta-movimientos:
+    container_name: ms-cuenta-movimientos
+    image: ms-cuenta-movimientose:latest
+    build:
+      context: ms-cuenta-movimientos
+      dockerfile: dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_PROFILES_ACTIVE=demo
+      - DATABASE_URL=jdbc:postgresql://java_db:5432/demo-devsu
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+    networks:
+      - backend
+    depends_on:
+      - java_db
+  java_db:
+    container_name: java_db
+    image: postgres:14
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/BaseDatos.sql:/docker-entrypoint-initdb.d/BaseDatos.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: demo-devsu
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge

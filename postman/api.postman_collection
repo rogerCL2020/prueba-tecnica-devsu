@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "5d55726a-c13f-4f54-83df-dd1435e11199",
+		"name": "DEVSU-API-JAVA-SPRING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3881124",
+		"_collection_link": "https://grey-moon-960376.postman.co/workspace/7068f373-edb9-4ec3-8b3a-f16c0fd7cb4d/collection/3881124-5d55726a-c13f-4f54-83df-dd1435e11199?action=share&source=collection_link&creator=3881124"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "crearCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan Osorio\",\r\n  \"genero\": \"MASCULINO\",\r\n  \"edad\": 58,\r\n  \"identificacion\": \"1597\",\r\n  \"direccion\": \"13 de junio y Equinoccial\",\r\n  \"telefono\": \"098874587\",\r\n  \"password\": \"1597\", \r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ms-clientes}}/api/demo/v1/clientes",
+							"host": [
+								"{{ms-clientes}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Juan Osorio\",\r\n  \"genero\": \"MASCULINO\",\r\n  \"edad\": 58,\r\n  \"identificacion\": \"1597\",\r\n  \"direccion\": \"13 de junio y Equinoccial\",\r\n  \"telefono\": \"098874587\",\r\n  \"password\": \"1597\", \r\n  \"estado\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ms-clientes}}/api/demo/v1/clientes",
+									"host": [
+										"{{ms-clientes}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clienteId\": \"3\",\n    \"nombre\": \"Juan Osorio\",\n    \"genero\": \"MASCULINO\",\n    \"edad\": 58,\n    \"identificacion\": \"1597\",\n    \"direccion\": \"13 de junio y Equinoccial\",\n    \"telefono\": \"098874587\",\n    \"contrasena\": null,\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "detalleCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ms-clientes}}/api/demo/v1/clientes/1/detalle",
+							"host": [
+								"{{ms-clientes}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"clientes",
+								"1",
+								"detalle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ms-clientes}}/api/demo/v1/clientes/1/detalle",
+									"host": [
+										"{{ms-clientes}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"clientes",
+										"1",
+										"detalle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clienteId\": \"1\",\n    \"nombre\": \"Jose Lema\",\n    \"genero\": \"MASCULINO\",\n    \"edad\": 27,\n    \"identificacion\": \"1245\",\n    \"direccion\": \"Otavalo sn y principal\",\n    \"telefono\": \"098254785\",\n    \"contrasena\": null,\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "actualizarCliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Jose Lema\",\r\n  \"genero\": \"MASCULINO\",\r\n  \"edad\": 22,\r\n  \"identificacion\": \"1245\",\r\n  \"direccion\": \"Otavalo sn y principal\",\r\n  \"telefono\": \"098254785\",\r\n  \"contrasena\": \"12345\", \r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ms-clientes}}/api/demo/v1/clientes/1",
+							"host": [
+								"{{ms-clientes}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Jose Lema\",\r\n  \"genero\": \"MASCULINO\",\r\n  \"edad\": 22,\r\n  \"identificacion\": \"1245\",\r\n  \"direccion\": \"Otavalo sn y principal\",\r\n  \"telefono\": \"098254785\",\r\n  \"contrasena\": \"12345\", \r\n  \"estado\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ms-clientes}}/api/demo/v1/clientes/1",
+									"host": [
+										"{{ms-clientes}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clienteId\": \"1\",\n    \"nombre\": \"Jose Lema\",\n    \"genero\": \"MASCULINO\",\n    \"edad\": 27,\n    \"identificacion\": \"1245\",\n    \"direccion\": \"Otavalo sn y principal\",\n    \"telefono\": \"098254785\",\n    \"contrasena\": \"12345\",\n    \"estado\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "obtenerTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ms-clientes}}/api/demo/v1/clientes/all",
+							"host": [
+								"{{ms-clientes}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"clientes",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ms-clientes}}/api/demo/v1/clientes/all",
+									"host": [
+										"{{ms-clientes}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"clientes",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"clienteId\": \"1\",\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"MASCULINO\",\n        \"edad\": 27,\n        \"identificacion\": \"1245\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": null,\n        \"estado\": true\n    },\n    {\n        \"clienteId\": \"2\",\n        \"nombre\": \"Marianela Montalvo\",\n        \"genero\": \"FEMENINO\",\n        \"edad\": 32,\n        \"identificacion\": \"5678\",\n        \"direccion\": \"Amazonas y NNUU\",\n        \"telefono\": \"097548965\",\n        \"contrasena\": null,\n        \"estado\": true\n    },\n    {\n        \"clienteId\": \"3\",\n        \"nombre\": \"Juan Osorio\",\n        \"genero\": \"MASCULINO\",\n        \"edad\": 58,\n        \"identificacion\": \"1597\",\n        \"direccion\": \"13 de junio y Equinoccial\",\n        \"telefono\": \"098874587\",\n        \"contrasena\": null,\n        \"estado\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "borrarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ms-clientes}}/api/demo/v1/clientes/1",
+							"host": [
+								"{{ms-clientes}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "crearCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"478758\",\r\n  \"tipoCuenta\": \"AHORRO\",\r\n  \"saldo\": 2000,\r\n  \"estado\": \"TRUE\",\r\n  \"cliente\": {\r\n    \"clienteId\": 1,\r\n    \"nombre\": \"Jose Lema\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/ms-cuentas-movimientos/v1/cuentas",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"ms-cuentas-movimientos",
+								"v1",
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"numeroCuenta\": \"585545\",\r\n  \"tipoCuenta\": \"CORRIENTE\",\r\n  \"saldo\": 1000,\r\n  \"estado\": true,\r\n  \"cliente\": {\r\n    \"clienteId\": 1,\r\n    \"nombre\": \"Jose Lema\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/cuentas",
+									"host": [
+										"{{ms-cuentas-movimientos}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"cuentas"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cuentaId\": \"5\",\n    \"numeroCuenta\": \"585545\",\n    \"tipoCuenta\": \"CORRIENTE\",\n    \"saldo\": 1000,\n    \"estado\": true,\n    \"cliente\": {\n        \"clienteId\": \"1\",\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"MASCULINO\",\n        \"edad\": 27,\n        \"identificacion\": \"1245\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": null,\n        \"estado\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "detalleCuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/ms-cuentas-movimientos/v1/cuentas/478758/detalle",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"ms-cuentas-movimientos",
+								"v1",
+								"cuentas",
+								"478758",
+								"detalle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/cuentas/478758/detalle",
+									"host": [
+										"{{ms-cuentas-movimientos}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"cuentas",
+										"478758",
+										"detalle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cuentaId\": \"1\",\n    \"numeroCuenta\": \"478758\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldo\": 2100,\n    \"estado\": true,\n    \"cliente\": {\n        \"clienteId\": \"1\",\n        \"nombre\": \"Jose Lema\",\n        \"genero\": \"MASCULINO\",\n        \"edad\": 27,\n        \"identificacion\": \"1245\",\n        \"direccion\": \"Otavalo sn y principal\",\n        \"telefono\": \"098254785\",\n        \"contrasena\": \"1234\",\n        \"estado\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "borrarCuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/ms-cuentas-movimientos/v1/cuentas/1",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"ms-cuentas-movimientos",
+								"v1",
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/ms-cuentas-movimientos/v1/cuentas/all",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"ms-cuentas-movimientos",
+								"v1",
+								"cuentas",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/cuentas/all",
+									"host": [
+										"{{ms-cuentas-movimientos}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"cuentas",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"cuentaId\": \"5\",\n        \"numeroCuenta\": \"585545\",\n        \"tipoCuenta\": \"CORRIENTE\",\n        \"saldo\": 1000,\n        \"estado\": true,\n        \"cliente\": {\n            \"clienteId\": \"1\",\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"MASCULINO\",\n            \"edad\": 27,\n            \"identificacion\": \"1245\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": null,\n            \"estado\": true\n        }\n    },\n    {\n        \"cuentaId\": \"1\",\n        \"numeroCuenta\": \"478758\",\n        \"tipoCuenta\": \"AHORRO\",\n        \"saldo\": 1425,\n        \"estado\": true,\n        \"cliente\": {\n            \"clienteId\": \"1\",\n            \"nombre\": \"Jose Lema\",\n            \"genero\": \"MASCULINO\",\n            \"edad\": 27,\n            \"identificacion\": \"1245\",\n            \"direccion\": \"Otavalo sn y principal\",\n            \"telefono\": \"098254785\",\n            \"contrasena\": null,\n            \"estado\": true\n        }\n    },\n    {\n        \"cuentaId\": \"2\",\n        \"numeroCuenta\": \"225487\",\n        \"tipoCuenta\": \"CORRIENTE\",\n        \"saldo\": 700,\n        \"estado\": true,\n        \"cliente\": {\n            \"clienteId\": \"2\",\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"FEMENINO\",\n            \"edad\": 32,\n            \"identificacion\": \"5678\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": null,\n            \"estado\": true\n        }\n    },\n    {\n        \"cuentaId\": \"3\",\n        \"numeroCuenta\": \"495878\",\n        \"tipoCuenta\": \"AHORRO\",\n        \"saldo\": 150,\n        \"estado\": true,\n        \"cliente\": {\n            \"clienteId\": \"3\",\n            \"nombre\": \"Juan Osorio\",\n            \"genero\": \"MASCULINO\",\n            \"edad\": 58,\n            \"identificacion\": \"1597\",\n            \"direccion\": \"13 de junio y Equinoccial\",\n            \"telefono\": \"098874587\",\n            \"contrasena\": null,\n            \"estado\": true\n        }\n    },\n    {\n        \"cuentaId\": \"4\",\n        \"numeroCuenta\": \"496825\",\n        \"tipoCuenta\": \"AHORRO\",\n        \"saldo\": 0,\n        \"estado\": true,\n        \"cliente\": {\n            \"clienteId\": \"2\",\n            \"nombre\": \"Marianela Montalvo\",\n            \"genero\": \"FEMENINO\",\n            \"edad\": 32,\n            \"identificacion\": \"5678\",\n            \"direccion\": \"Amazonas y NNUU\",\n            \"telefono\": \"097548965\",\n            \"contrasena\": null,\n            \"estado\": true\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "crearMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"478758\",\r\n  \"tipoCuenta\": \"AHORRO\",\r\n  \"saldo\": 2000,\r\n  \"estado\": \"TRUE\",\r\n  \"cliente\": {\r\n    \"clienteId\": 1,\r\n    \"nombre\": \"Jose Lema\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/movimientos",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroCuenta\": \"496825\",\r\n    \"valor\": -540\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/movimientos",
+									"host": [
+										"{{ms-cuentas-movimientos}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"movimientos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"movimientoId\": \"4\",\n    \"fecha\": \"2024-05-16T09:38:44.0225536\",\n    \"saldoInicial\": 540,\n    \"valor\": -540,\n    \"saldo\": 0,\n    \"numeroCuenta\": \"496825\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reporteMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/movimientos/reporte?fechaDesde=20/05/2024&fechaHasta=10/02/2024&clienteId=1",
+							"host": [
+								"{{ms-cuentas-movimientos}}"
+							],
+							"path": [
+								"api",
+								"demo",
+								"v1",
+								"movimientos",
+								"reporte"
+							],
+							"query": [
+								{
+									"key": "fechaDesde",
+									"value": "20/05/2024"
+								},
+								{
+									"key": "fechaHasta",
+									"value": "10/02/2024"
+								},
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ms-cuentas-movimientos}}/api/demo/v1/movimientos/reporte?fechaDesde=10/05/2024&fechaHasta=20/05/2024&clienteId=3",
+									"host": [
+										"{{ms-cuentas-movimientos}}"
+									],
+									"path": [
+										"api",
+										"demo",
+										"v1",
+										"movimientos",
+										"reporte"
+									],
+									"query": [
+										{
+											"key": "fechaDesde",
+											"value": "10/05/2024"
+										},
+										{
+											"key": "fechaHasta",
+											"value": "20/05/2024"
+										},
+										{
+											"key": "clienteId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"fecha\": \"16/05/2024\",\n        \"cliente\": \"Juan Osorio\",\n        \"numeroCuenta\": \"495878\",\n        \"tipoCuenta\": \"AHORRO\",\n        \"saldoInicial\": 0,\n        \"estado\": \"true\",\n        \"movimiento\": 150,\n        \"saldoDisponible\": 150\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ms-cuentas-movimientos",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "ms-clientes",
+			"value": "localhost:8081",
+			"type": "string"
+		}
+	]
+}
