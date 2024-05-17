@@ -1,6 +1,6 @@
 # Prueva Técnica JAVA
 
-## Microservicio para registrar un usuario + token JWT
+## Microservicios con Spring WEB-FLUX
 
 Este proyecto se desarrollaron dos microservicios con el objetivo de demostrar  conocimiento técnico.
 
@@ -22,7 +22,7 @@ Este proyecto se desarrollaron dos microservicios con el objetivo de demostrar  
 - [x] F6: Pruebas de integración
 - [x] F7: Despliegue en contendores.
 
-## Se usa JAVA 17, Spring Boot 3, Spring Security JWT , JPA + BD-PostgreSql
+## Se usa JAVA 17, Spring Boot 3, Spring Web-Flux ,Spring Data JPA + BD-PostgreSql
 
 Se crearon dos microservicios:
 
@@ -161,3 +161,12 @@ curl --location 'localhost:8080/api/demo/v1/movimientos' \
 }'
 ```
 ![img_4.png](postman%2Fpruebas%2Fimg_4.png)
+
+#
+#
+#
+
+```java
+                                              "Thanks to my daughter Sofia "
+                                       for "being my inspiration every day."
+```
